@@ -1,6 +1,25 @@
-/* ================================
-   ESTILO GERAL (Dark MIT/NASA)
-================================ */
+/* --------------------------
+   TEMA DARK PROFISSIONAL
+   Estilo MIT / NASA / Quantum
+--------------------------- */
+
+:root {
+    --bg: #0d0d0d;
+    --bg2: #111;
+    --bg3: #161616;
+
+    --text: #e4e4e4;
+    --text-soft: #b8b8b8;
+
+    --accent: #00d0ff;
+    --accent-soft: #00a6c7;
+
+    --card-bg: #141414;
+    --border: #1e1e1e;
+
+    --radius: 10px;
+    --transition: 0.25s ease;
+}
 
 * {
     margin: 0;
@@ -9,115 +28,178 @@
 }
 
 body {
-    background-color: #0A0A0D;
-    color: #EAEAEA;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    padding-bottom: 50px;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.7;
 }
 
-/* ================================
+/* --------------------------
    NAVBAR
-================================ */
+--------------------------- */
 
 .navbar {
-    width: 100%;
-    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #0F0F12;
-    border-bottom: 1px solid #1A1A1F;
+    padding: 20px 40px;
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
     z-index: 10;
 }
 
 .logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 20px;
-    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 1.2;
+    color: var(--accent);
 }
 
-.menu {
-    list-style: none;
+.navbar ul {
     display: flex;
     gap: 20px;
+    list-style: none;
 }
 
-.menu a {
+.navbar a {
     text-decoration: none;
-    color: #EAEAEA;
-    padding: 6px 10px;
-    border-radius: 6px;
-    transition: 0.2s;
+    color: var(--text-soft);
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: var(--radius);
+    transition: var(--transition);
 }
 
-.menu a:hover {
-    background: #1A1A1F;
-    color: #3D7AFE;
+.navbar a:hover {
+    background: var(--bg3);
+    color: var(--accent);
 }
 
-/* ================================
-   HERO (Home)
-================================ */
-
-.hero {
-    text-align: center;
-    margin-top: 80px;
-    padding: 0 30px;
+.navbar a.active {
+    background: var(--accent);
+    color: black;
 }
 
-.hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 32px;
+/* --------------------------
+   LAYOUT GERAL
+--------------------------- */
+
+.content {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Títulos */
+
+h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .subtitle {
-    font-size: 16px;
-    color: #9F9F9F;
+    color: var(--text-soft);
+    margin-bottom: 25px;
 }
 
-/* ================================
-   CARDS DA HOME
-================================ */
+/* --------------------------
+   BOTÕES
+--------------------------- */
 
-.cards {
-    display: grid;
-    margin: 60px auto;
-    width: 90%;
-    max-width: 1000px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.card {
-    background: #111114;
-    padding: 20px;
-    text-align: center;
-    border: 1px solid #1A1A1F;
+.btn {
+    background: var(--accent);
+    padding: 12px 25px;
+    border-radius: var(--radius);
+    color: black;
+    font-weight: bold;
     text-decoration: none;
-    color: #EAEAEA;
-    border-radius: 10px;
-    transition: 0.2s;
-    font-family: 'Space Grotesk';
-    font-size: 18px;
+    transition: var(--transition);
 }
 
-.card:hover {
-    background: #1A1A1F;
-    border-color: #3D7AFE;
-    color: #3D7AFE;
+.btn:hover {
+    background: var(--accent-soft);
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* --------------------------
+   CARDS / QUADROS
+--------------------------- */
+
+.card,
+.about-box,
+.contact-box {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+
+.card:hover,
+.about-box:hover,
+.contact-box:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+}
+
+/* --------------------------
+   GRID PARA CARDS
+--------------------------- */
+
+.cards-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* --------------------------
+   E-MAIL BOX
+--------------------------- */
+
+.email-box a {
+    color: var(--accent);
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* --------------------------
+   RODAPÉ
+--------------------------- */
 
 footer {
     text-align: center;
-    padding: 30px 0;
-    color: #9F9F9F;
-    margin-top: 50px;
+    padding: 30px;
+    margin-top: 60px;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    color: var(--text-soft);
+}
+
+/* --------------------------
+   RESPONSIVIDADE
+--------------------------- */
+
+@media (max-width: 780px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .content {
+        padding: 15px;
+    }
 }
