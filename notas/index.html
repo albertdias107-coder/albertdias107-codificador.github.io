@@ -1,41 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notas — Albert S. Dias</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
 <header>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="estudos.html">Estudos</a>
-        <a href="artigos.html">Artigos</a>
-        <a href="relatorios.html">Relatórios</a>
-        <a href="notas.html" class="active">Notas</a>
-        <a href="biblioteca.html">Biblioteca</a>
-        <a href="sobre.html">Sobre Mim</a>
-        <a href="contato.html">Contato</a>
-        <a href="banca.html">Banca Online</a>
+    <nav class="navbar">
+        <div class="logo">Albert<br>S.<br>Dias</div>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../estudos/index.html">Estudos</a></li>
+            <li><a href="../artigos/index.html">Artigos</a></li>
+            <li><a href="../relatorios/index.html">Relatórios</a></li>
+            <li><a class="active" href="#">Notas</a></li>
+            <li><a href="../biblioteca/index.html">Biblioteca</a></li>
+            <li><a href="../sobre/index.html">Sobre mim</a></li>
+            <li><a href="../contato/index.html">Contato</a></li>
+            <li><a href="../banca/index.html">Banca Online</a></li>
+        </ul>
     </nav>
 </header>
 
-<main>
+<main class="content">
     <h1>Notas</h1>
-    <p>Aqui você pode registrar suas anotações rápidas, ideias, insights e observações de aula.</p>
+    <p class="subtitle">Resumos, ideias, fórmulas e anotações rápidas.</p>
 
-    <section class="card">
-        <h2>Últimas Notas</h2>
-        <p>Nenhuma anotação adicionada ainda.</p>
-    </section>
+    <div class="cards-grid">
+
+        <a href="#" class="card">
+            <h3>Álgebra Linear</h3>
+            <p>Espaços vetoriais, bases, autovalores e operadores.</p>
+        </a>
+
+        <a href="#" class="card">
+            <h3>Cálculo Vetorial</h3>
+            <p>Campos, divergente, gradiente, rotor e integrais de linha.</p>
+        </a>
+
+        <a href="#" class="card">
+            <h3>Mecânica Clássica</h3>
+            <p>Princípio da ação mínima, lagrangiano e hamiltoniano.</p>
+        </a>
+
+        <a href="#" class="card">
+            <h3>Equações Diferenciais</h3>
+            <p>EDOs de 1ª e 2ª ordem, sistemas e métodos de solução.</p>
+        </a>
+
+        <a href="#" class="card">
+            <h3>Estatística & Probabilidade</h3>
+            <p>Distribuições, esperança, variância e aleatoriedade física.</p>
+        </a>
+
+        <a href="#" class="card">
+            <h3>Física Moderna</h3>
+            <p>Introdução a quântica, postulados e estados de spin.</p>
+        </a>
+
+    </div>
 </main>
 
 <footer>
-    <p>© 2025 — Albert S. Dias | Black Quantum</p>
+    <p>© 2025 — Albert S. Dias</p>
 </footer>
 
-<script src="assets/js/main.js"></script>
 </body>
 </html>
+
